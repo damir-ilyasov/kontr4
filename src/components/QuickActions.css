@@ -60,3 +60,11 @@
 .action-text {
   font-size: 0.95rem;
 }
+
+.action-btn.export {
+  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.action-btn.clear {
+  background: linear-gradient(135deg, #F44336, #C62828);
+}

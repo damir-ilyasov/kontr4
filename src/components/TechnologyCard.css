@@ -196,3 +196,122 @@
 .technology-card.status-changing {
   animation: statusChange 0.5s ease;
 }
+
+/* Стили для заметок */
+.notes-section {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  border: 1px solid #e1e5e9;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notes-header h4 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.edit-notes-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-notes-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(52, 152, 219, 0.2);
+}
+
+.notes-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn, .cancel-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-btn {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #FF9800, #EF6C00);
+  color: white;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+  transform: translateY(-1px);
+}
+
+.notes-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.notes-display {
+  min-height: 60px;
+}
+
+.notes-content {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  font-family: inherit;
+}
+
+.notes-empty {
+  margin: 0;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+}
+
+.notes-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.char-count, .line-count {
+  background-color: #f0f2f5;
+  padding: 2px 8px;
+  border-radius: 10px;
+}

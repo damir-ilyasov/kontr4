@@ -1,10 +1,10 @@
 import React from 'react';
 import './QuickActions.css';
 
-function QuickActions({ markAllAsCompleted, resetAllStatuses, pickRandomTechnology }) {
+function QuickActions({ markAllAsCompleted, resetAllStatuses, pickRandomTechnology, clearAllData, exportData }) {
   return (
     <div className="quick-actions">
-      <h3>Быстрые действия</h3>
+      <h3>🚀 Быстрые действия</h3>
       <div className="actions-grid">
         <button 
           onClick={markAllAsCompleted}
@@ -31,6 +31,24 @@ function QuickActions({ markAllAsCompleted, resetAllStatuses, pickRandomTechnolo
         >
           <span className="action-icon">🎲</span>
           <span className="action-text">Случайная</span>
+        </button>
+        
+        <button 
+          onClick={exportData}
+          className="action-btn export"
+          title="Экспортировать все данные в JSON файл"
+        >
+          <span className="action-icon">📤</span>
+          <span className="action-text">Экспорт</span>
+        </button>
+        
+        <button 
+          onClick={clearAllData}
+          className="action-btn clear"
+          title="Очистить все данные и localStorage"
+        >
+          <span className="action-icon">🗑️</span>
+          <span className="action-text">Очистить все</span>
         </button>
       </div>
     </div>
