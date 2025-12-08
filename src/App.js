@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import TechnologyCard from './components/TechnologyCard';
+import ProgressHeader from './components/ProgressHeader';
 
 function App() {
+  const technologies = [
+  { id: 1, title: 'React Components', description: 'Изучение базовых компонентов', status: 'completed' },
+  { id: 2, title: 'JSX Syntax', description: 'Освоение синтаксиса JSX', status: 'in-progress' },
+  { id: 3, title: 'State Management', description: 'Работа с состоянием компонентов', status: 'not-started' }
+];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main className="app-container">
+        <div className="technologies-section">
+          <ProgressHeader technologies={technologies} />
+          <h2>Дорожная карта</h2>
+          <div className="technologies-list">
+            {technologies.map(tech => (
+              <TechnologyCard
+                key={tech.id}
+                title={tech.title}
+                description={tech.description}
+                status={tech.status}
+              />
+            ))}
+          </div>
+        </div>
+      </main>      
     </div>
   );
 }
