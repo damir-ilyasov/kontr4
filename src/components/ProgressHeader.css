@@ -154,3 +154,117 @@
     padding: 15px;
   }
 }
+/* Дополнительные стили для ProgressHeader.css */
+.stat-subtext {
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
+
+.progress-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.category-stats {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.category-stats h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-name {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.category-progress {
+  flex: 2;
+  height: 6px;
+  background-color: #ecf0f1;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.category-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.category-percentage {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  min-width: 40px;
+  text-align: right;
+}
+
+.top-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.top-category-label {
+  color: #666;
+}
+
+.top-category-value {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Мотивационные сообщения */
+.motivation-message .completed {
+  color: #27ae60;
+}
+
+.motivation-message .almost {
+  color: #e67e22;
+}
+
+.motivation-message .good {
+  color: #3498db;
+}
+
+.motivation-message .medium {
+  color: #9b59b6;
+}
+
+.motivation-message .ok {
+  color: #1abc9c;
+}
+
+.motivation-message .start {
+  color: #34495e;
+}

@@ -1,0 +1,112 @@
+.filter-bar {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.filter-header h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.active-filter-info {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.active-filter-info strong {
+  color: var(--filter-color, #3498db);
+}
+
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.filter-btn:hover {
+  border-color: var(--filter-color, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.active {
+  background-color: var(--filter-color, #3498db);
+  border-color: var(--filter-color, #3498db);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-icon {
+  font-size: 1rem;
+}
+
+.filter-label {
+  white-space: nowrap;
+}
+
+.filter-count {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.filter-btn.active .filter-count {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}

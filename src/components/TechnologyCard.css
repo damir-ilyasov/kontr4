@@ -6,14 +6,21 @@
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .technology-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Статусы карточек */
+.technology-card:active {
+  transform: translateY(-2px);
+}
+
+/* Статусы карточек с анимацией */
 .technology-card.completed {
   border-left: 5px solid #4CAF50;
   background-color: #f8fff9;
@@ -29,11 +36,32 @@
   background-color: #fffbf5;
 }
 
+/* Категории */
+.technology-card.основы-react {
+  border-top: 3px solid #9c27b0;
+}
+
+.technology-card.продвинутый-react {
+  border-top: 3px solid #3f51b5;
+}
+
+.technology-card.библиотеки {
+  border-top: 3px solid #009688;
+}
+
+.technology-card.фреймворки {
+  border-top: 3px solid #ff5722;
+}
+
 .card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 15px;
+}
+
+.title-container {
+  flex: 1;
 }
 
 .card-title {
@@ -43,24 +71,44 @@
   font-weight: 600;
 }
 
+.card-category {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #f0f2f5;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
 .status-indicator {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 5px 12px;
   border-radius: 20px;
   background-color: #f0f2f5;
+  white-space: nowrap;
 }
 
 .card-description {
   color: #555;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 1rem;
+  min-height: 60px;
 }
 
 .card-footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .status-badge {
@@ -70,6 +118,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
 .status-badge.completed {
@@ -85,4 +134,65 @@
 .status-badge.not-started {
   background-color: #FF9800;
   color: white;
+}
+
+.next-action-hint {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  color: #666;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.technology-card:hover .next-action-hint {
+  opacity: 1;
+}
+
+.hint-icon {
+  font-size: 0.9rem;
+}
+
+.card-id {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-family: monospace;
+}
+
+.progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #f0f0f0;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.progress-fill.completed {
+  background: linear-gradient(90deg, #4CAF50, #8BC34A);
+}
+
+.progress-fill.in-progress {
+  background: linear-gradient(90deg, #2196F3, #03A9F4);
+}
+
+.progress-fill.not-started {
+  background: linear-gradient(90deg, #FF9800, #FFB74D);
+}
+
+/* Анимация при изменении статуса */
+@keyframes statusChange {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.technology-card.status-changing {
+  animation: statusChange 0.5s ease;
 }

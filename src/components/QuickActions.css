@@ -1,0 +1,62 @@
+.quick-actions {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  color: white;
+}
+
+.quick-actions h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:active {
+  transform: translateY(-1px);
+}
+
+.action-btn.complete-all {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+}
+
+.action-btn.reset-all {
+  background: linear-gradient(135deg, #FF9800, #EF6C00);
+}
+
+.action-btn.random-tech {
+  background: linear-gradient(135deg, #9C27B0, #6A1B9A);
+}
+
+.action-icon {
+  font-size: 1.2rem;
+}
+
+.action-text {
+  font-size: 0.95rem;
+}
