@@ -1,0 +1,102 @@
+.progress-bar-container {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.progress-bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.progress-percentage {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.progress-bar-outer {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  position: relative;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-bar-inner.animated {
+  animation: pulse 2s infinite;
+}
+
+.progress-bar-inner.striped {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+.progress-bar-inner.striped.animated {
+  animation: stripe-animation 1s linear infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes stripe-animation {
+  0% { background-position: 1rem 0; }
+  100% { background-position: 0 0; }
+}
+
+.progress-text {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-caption {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Варианты цветов */
+.progress-bar-primary .progress-bar-inner {
+  background-color: #3498db;
+}
+
+.progress-bar-success .progress-bar-inner {
+  background-color: #2ecc71;
+}
+
+.progress-bar-warning .progress-bar-inner {
+  background-color: #f39c12;
+}
+
+.progress-bar-danger .progress-bar-inner {
+  background-color: #e74c3c;
+}
+
+.progress-bar-info .progress-bar-inner {
+  background-color: #1abc9c;
+}

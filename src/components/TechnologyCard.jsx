@@ -64,7 +64,7 @@ function TechnologyCard({ id, title, description, status, category, notes, updat
 
   return (
     <div 
-      className={`technology-card ${status} ${category.toLowerCase().replace(' ', '-')}`}
+      className={`technology-card ${status} ${category?.toLowerCase()?.replace(' ', '-') || ''}`}
       onClick={handleCardClick}
       title={`Кликните, чтобы изменить статус. Сейчас: ${getStatusText()}`}
     >
